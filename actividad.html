@@ -14,8 +14,11 @@
                 verseccioncss.style.display = "none"
              let verseccionjavascript = document.getElementById('seccionjavascript')
                 verseccionjavascript.style.display = "none"
-                
-        
+
+
+            let botonlobby = document.getElementById('lobby')
+            botonlobby.addEventListener('click', partelobby)
+            
             let botonHTML = document.getElementById('HTML')
             botonHTML.addEventListener('click', parteHTML)
         
@@ -34,6 +37,10 @@
         }
         function partealerta(){
             alert("profe pongame 5 porfis")
+        }
+        function partelobby(){
+
+        location.reload()
         }
         function parteback(){
 
@@ -87,81 +94,211 @@
         window.addEventListener("load", inicio) 
         </script> 
         <style>
+            #intro{
+                width: 70%;
+                
+            }
+            
+            td, tr, th{
+                background-color: rgb(178, 239, 86);
+                
+               
+                border: 1px solid;
+                border-color: rgb(59, 96, 22);
+                border-collapse: collapse;
+                
+            }
+            th{
+                font-size: medium;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+
             #pie{
-                background-color: rgb(3, 36, 2);
+                
+                border: 5px;
+                border-style: solid;
+                border-color: rgb(0, 0, 0);
+                background-color: rgb(4, 47, 2);
                 color: rgb(186, 246, 183);
+                clear: both;
             }
 
             #header{
-                background-color: rgb(45, 233, 45);
+                width: 90%;
+                border-style: solid;
+                border-color: rgb(255, 255, 255);
+                background-color: rgb(82, 206, 82);
                 color: rgb(44, 46, 44);
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 
             }
 
-            p {
-                width: 800px;
+            p{
+                
                 font-family: Arial, Helvetica, sans-serif;
                 color: rgb(36, 39, 36);
+                margin-left: 50;
+               
+                
+                
 
             }
 
             h1{
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 color: rgb(4, 55, 4);
+                margin-left: 20px;
+                
+                
                 
             }
-            
+            .subtitulo {
+                margin-left: 25px;
+             
 
+            
+            }       
+            
+            .botones{
+                margin: 10px;
+                 background-color: rgb(84, 250, 84);
+                 
+            }
+            #back{
+                float: left;
+            }
+
+            #mainaside{
+                
+
+                border-style: solid;
+                border-color: rgb(76, 122, 16);
+                width: 340px;
+                min-height: 700px;
+                background-color: rgb(208, 241, 24);
+                margin-top: 50px;
+               
+                float: right;
+                clear: right;
+                
+                
+            }
 
         </style>
       
 
     </head>
 
-    <body style = "background-color: rgb(198, 237, 139);">
+    <body style = "background-color: rgb(198, 237, 139); margin: 25px;">
         
-        <header id="header">programacion y desarrollo
-            <button style="margin: 10px; background-color: rgb(84, 250, 84);" id = "HTML">HTML</button>
-            <button style="margin: 10px; background-color: rgb(84, 250, 84)" id = "javascript">Javascript</button>
-            <button style="margin: 10px; background-color: rgb(84, 250, 84)" id = "css">css</button>
+        <header id="header" >programacion y desarrollo
+            <button class="botones"id = "lobby">lobby</button>
+            <button class="botones"id = "HTML">HTML</button>
+            <button class="botones"id = "javascript">Javascript</button>
+            <button class="botones"id = "css">css</button>
         </header>
-        <section id="intro">
+        <aside id="mainaside">
 
-        <h1>programacion</h1>
-        <p>La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora como realizar algún tipo de tarea. Pero no solo la acción de escribir un código para que la computadora o el software lo ejecute.<br> a continuacion presento algunos lenguajes... </p>
+            <h2 class="subtitulo">proximo</h2>
+            <ul>
+                
+                <li>agregar marcos a el header y footer.(listo)</li>
+                <li> poner las etiquetas aprendidas de CSS</li>
+                <li>buscar una mejor paleta de color</li>
+                <li>terminar la seccion -intro- </li>
+                <li>agregar anclas y links de referencias para una mayor movilidad en la pagina </li>
+
+
+            </ul>
+
+
+        </aside>
+        <section id="intro">
+            <div>
+                
+
+                <h1 class="subtitulo">programacion</h1>
+                <p>La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora como realizar algún tipo de tarea. Pero no solo la acción de escribir un código para que la computadora o el software lo ejecute, por lo que tenemos que valorar su importancia actualmente</p>
+                <h3 class="subtitulo">importancia de la programacion</h3>
+                <p>No es algo nuevo decir que en la actualidad vivimos en un mundo totalmente virtual y la programación y estudio de la tecnología viene siendo necesario para la sociedad actual dándonos comodidades que hace años nadie ni siquiera imaginaba, y como seres humanos buscamos la evolución y dado que estos temas informáticos vinieron para quedarse debemos de ver la programación como la puerta que no lleva a innovar y crear nuevos programas que nos ayuden como sociedadLa programación es fundamental para acrecentar el avance tecnológico dentro de las industrias que para llevar a cabo sus funciones necesitan de sitios y aplicaciones creadas a partir de los códigos. No es novedad que vivimos en un mundo computarizado donde la tecnología forma parte de todo lo que hacemos.</p>
+                <h3 class="subtitulo">Para que sirve cada lenguaje?</h3> 
+                <p>A la hora de desarrollar aplicaciones, paginas web o lo que sea que tengas en mente debes de saber con que lenguaje trabajaras ya que cada uno tiene sus usos, fortalezas y limitaciones por lo que no puedes desarrollar una aplicacion en ios con css o usas html puro para programar un juego por eso veremos diferentes lenguajes de programacion y sus usos comunes...</p>
+                <li>html: <p >html lo veremos luego mas a profundidad pero este lenguaje es usado comunmente para el desarrollo de paginas webs, por lo que si te interesa el desarrollo web es de suma importancia que le vayas echando un ojo</p></li>
+                <img src="data:image/png;base64,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"  style="width: 100px ; margin-left: 100px; background-color:  rgb(3, 36, 2);">
+                <li>css: <p >css tiene la funcion de editar colores y modificar aspectos visuales de html por lo que junto a este puede ayudar a crear una pagina web en condiciones</p></li>
+                <img src="https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo"style="width: 100px ; margin-left: 100px; background-color:  rgb(3, 36, 2);">
+                <li>javascript: <p >JavaScript es un lenguaje de secuencias de comandos que te permite crear contenido de actualización dinámica, controlar multimedia, animar imágenes y prácticamente todo lo demás. (Está bien, no todo, pero es sorprendente lo que puedes lograr con unas pocas líneas de código JavaScript), ademas de ser un lenguaje relativamente facil de aprender es perfecto para inciar con este mundo de la programacion</p></li>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAAC6CAMAAAAu0KfDAAAAdVBMVEX33x4AAAD/5h/HtBi6qBcZFgMxLAb/6iD85B//6B+FeBD64R7/7SD03R4vKgbPuxmklBTgyhtxZg40Lwbs1R3m0BwgHQRLQwl6bg+unRXVwBo9NwcdGgSXiBJSSgqMfxEmIwRqYA0KCQFaUgtkWgwSEQJEPgjaH22TAAAGDUlEQVR4nO2b61azOhBACUFJCNcWLAT5erH6/o94oGpLSUKC0NCz1uy/WtyOk5CZjI4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwP4O51P+GuoStpkH8IWT0+5kb0gJXzT4oy6BJvSQKNZ94FITvgwHJiAnzCS638dsn+ub0cnjd7blPV4g9wQc0wHMV38tIxDfD7/6myRzroSf4dWDxolInES7l4l34A247683VaRZ8Sq1/iJvIbuCN1UOvHhPv2GT0GdX9VCfesk1Uy2Q9dcb2BuYt2GLcDaPemJkjlNhzN1In3oupes2t5YyJOsvfTc0ROua29hkT9XBnbo7Q3tb2bqBOvSnm7VK1FHa9OnP+TVPf5c+iTr23aepxYSdl9OokkAoejuXmS/aFsrAibqBOuGSRvjVOSLtyIwvi+698JeHTLFPXOwnmx8L/8SNh8dH7wmvA7B0FtOpMPLyc+1s3cW4JdcY2Sw6teiSmenb/u0W/p/jK2tvISJ3lRyHo4eAR+WX3/Cos1xpa9UJYpcLb1uUv6LXybZenWvVsK+SLkBbhvrRbZVzQR91AneWWa7sLf4g6FzVXaSPpoy68MlN/DVER/Q5zHqpvQ+XTrKJXF5tGnv0lKUP/ShIL6i1/Cnf98asS1FGdPEO669WxrKRu1mxOX810x6/sQ6KOapyvLf/nUgMdvWKlxvqv2IwC75yuKm/QEWDSOu47bYIiXE1+djNjlzC2TtIbtZDUYb/IewVZI/Qm6oSL5em9fJqtcJlk1i7VNtf/Nbn1t5SR+q38VBOnthesWX+dOHp3dErsrlfDqwFiEHeEgsxeF8b8LqnfblHzz7OY8cY3eMxJNftMx3tjrzFgfm/KCNdeP7aU1hJ+wm2149K9cCsvsoksuU9Rd1iYlPpme2nJfZK6Zk7gl8BO3T1RvZPnQo9gCLayz0xW79ZrVo4OOqC6sPFi/YN6l/NRsxuzL59WvZtGyquNWn47Nsm0snorT/Nkr5RvHu3tzFDvct7JVAMbOwsXkDPUnS70kSLy+NnVuxWbHWU9JguTAnPV2+OBU0mOB18P8u0xX73NeSwJe/QY3x4LqDsOlbRUs4dnzCLqTigOb/zhKRMxLzXGuqOSlEmX7cFLfjjBsZE6jVLJ9df1wYWg3ix5BCO+5CBNvOH28C4bFqT4iEr1RR0rhAJqv6C6n38F4h/R9YavlDcsqPv55bxSqWsQ8U57MXVG8gahWBzLokJj6zBIDEainynHd+WhihXC1r5UwriRdwmLpG4UTiGD+Sc3967d0p2qz0K4kOvVIsuU+fw69zGIGyuE65Ytu/so7l8+fuRyd1+s+sS0+wPUaa6L6G0QN8mu9nWrLJkflfeZcJaOMVAx6GiBo2Mbt/7q/7yb7pcNApbXJGUsHe6cqE5cwckVMx2h+eKsGNw2x9mtj09kV1zXu2jJeEBHUNy9ndpTu/BqaDnPNi9SYRx3W2WUuoS4NOKyPuJtJUfyf8w4pEnudk/onkFzHMgaeuncfJH3Zz/2Fca4asrhGaDj9bapkUQSzov8sX1CwjPePmQjHVU+8dmprriOeIlfY8V0dNNbx0zd3T3F27rexqri9JjPVVdcNY/R3xlYNPnjP6hfvMbQyqCz3Ce4KxEonzC53uM8O+jd7mdyG3HjMHjX+5IiQs/LIhMzJB/vsQ0Ihp93jf9Lo0e5TJnhJhN+Zi1M0zHxkKNnqZmNCUP/J8lVEJsc99Ny87GkMl1rjawxzvx00uz9dqSamgpzKrN83ysWV+hN+JeH3YLm3THDKN8bZQHnZiY3jxc2S1+dkkIbt09vZHEx+QSYSLr8VBXzq9HJkPdzNF6QkTCtdWkXl4+ZcfDzRhn5w9Gj2gylTrUZuzjdBfxR173Mz6pAmC1G3UAIjkzefm3NlKQb+WGyDir+yDkwQqIsac79v3tdVrwtHQwfwAjJM5wOgl9v0iSLHj6IxLpBrfYX8Fowz9s9ZbQhJ39A+4GCY6+qqsszut/I3mBAV964cwZEGXHbR8x7BgAAAAAAAPA4/gMhkFZhpB+AswAAAABJRU5ErkJggg=="style="width: 100px ; margin-left: 100px; background-color:  rgb(3, 36, 2);">
+                <li>java<p >Java es un lenguaje que te servira para el desarrollo de apps en android aunque ultimamente a dejado de ser el lenguaje predilecto para esta tarea ya que an llegado nuevos lenguajes con una mejor curva de aprendisaje que pueden remplazarlo facilmente, java es un lenguaje muy extricto en cuanto a su sintaxis por lo que no lo considero un buen lenguaje para iniciar con la programacion pues puede que te artes y dejes este mundo por esas problematicas, si llegas a dominar este lenguaje seras capaz de crear programas de aclculo o de utilidad ademas de juegos para android o aplicacion, sin duda un gran reto con una gran recompenza</p></li>
+                <img src="data:image/png;base64,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" style="width: 200px ; margin-left: 100px; background-color:  rgb(3, 36, 2);">
+                <li>c#<p >-proximamente-</p></li>
+
         
-            <button style="margin: 10px; background-color: rgb(84, 250, 84);" id = "HTML">HTML</button>
-            <button style="margin: 10px; background-color: rgb(84, 250, 84);" id = "javascript">Javascript</button>
-            <button style="margin: 10px; background-color: rgb(84, 250, 84);" id = "css">css</button>
+        
+        
+                
+
     
-        </section>
+                </section>
+                
+                
+
+                
+            </div>
+            
+        
         <section id="seccionHTML">
             <article>
 
-                <h3>¿que es html?</h3>
+                <h2 class="subtitulo">¿que es html?</h2>
                 <p style="width: 800px;">El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos (este lenguaje usa el menor y mayor que para sus etiquetas) ademas por lo poco que he experimentado este lenguaje es lenguaje que va acompañado con otros para poder dar un resultado mas satisfactorio como lo seria el css o el javascript los cuales le dan color e interactividad respectivamente</p>
 
                 </article>
             <article>
 
-                <h3>Estructura</h3>
+                <h3 class="subtitulo">Estructura</h3>
                 <p>Los documentos en html suelen tener una mismas estructura basica la cual inicia con la etiqueta "htmal"<br> y como si se tratara de una caja vamos a poner adentro otras dos etiquetas vitales para nuesta pagina las cuales son "head" y "body"</p>
                 <ul>
                     <li>head:<br> <p>en esta etiqueta pondremos practicamente podo lo que no se vaya a ver en la pagina o por lo menos asi lo entendi yo ya que aqui pondremos cosas como el titulo de la pagina el cual es el que se ve en la pestaña del navegador (en este caso seria "Tegnologia") tamien podremos ponel otros lenguajes de programacion como lo seria con la etiqueta "script" y por ahora desconozco en el caso de css</p></li>
                     <li>body:<br> <p>en esta etiqueta podremos basicamente todo lo que el usuario final va a ver tambien aqui ocurre toda la maquetacion que se vio en el material de apoyo de la semana 1 las etiquetas basica que puede haber dentro de esta etiqueta podrian ser
-                        <ul>
-
-                            <li>Section:<br><p style="width: 750px;">Como su nombre indica se usa para delimitar una seccion</p></li>
-                            <li>p:<br><p style="width: 750px;">se usa para escribir texto es basicamente un parrafo</p></li>
-                            <li><br>h1-6:<p style="width: 750px;">h y un numero del 1 al 6 es como un titulo o subtitulo dependiendo de el numero elejido siendo 1 el titulo mas importante y 6 el menos importante</p></li>
-                            <li><br>header:<p style="width: 750px;">es basicamente el encabezado</p></li>
-                            <li><br>footer<p style="width: 750px;">es un pie de pagina </p></li>
-            
-                        </ul></p></li>
+                        
+                        
+                        <table>
+                            <tr>
+                                <th>etiquetas</th>
+                                
+                                <th>funcion</th>
+                               
+                            </tr>
+                            <tr>
+                                <th>Section</th>
+                                <td>Como su nombre indica se usa para delimitar una seccion</td>
+                            </tr>
+                            <tr>
+                                <th>p:</th>
+                                <td>se usa para escribir texto es basicamente un parrafo</td>
+                            </tr>
+                            <tr>
+                                <th>h1-6:</th>
+                                <td>h y un numero del 1 al 6 es como un titulo o subtitulo dependiendo de el numero elejido siendo 1 el titulo mas importante y 6 el menos importante</td>
+                            </tr>
+                            <tr>
+                                <th>Header</th>
+                                <td>es basicamente el encabezado</td>
+                            </tr>
+                            <tr>
+                            <th>Footer</th>
+                            <td>es un pie de pagina </td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
         
                 </ul>
-                <h4>Maquetacion HTML</h4>
+                <h4 class="subtitulo">Maquetacion HTML</h4>
                 <p>-proximamente-</p> 
                 
                 
@@ -169,8 +306,10 @@
         </section>
         <section id="seccionCSS">
             <article>
-                <h3>CSS</h3>
-                <p>-aun no conozcosuficiente sobre css como para compartilo lo lamento-<br></p>
+                <h3 class="subtitulo">CSS</h3>
+                <p>-proximamente-<br></p>
+        
+        
                 
 
             </article>
@@ -195,18 +334,19 @@
         </ul>
 
 
-        </ul>
+        
             
             </article>
 
             
 
         </section>
-        <button style="margin: 70px; background-color: rgb(84, 250, 84);" id = "back">back</button>
+        <button class="botones"id = "back">back</button>
+        
 
         
         <footer id="pie">
-            <aside>
+            <aside >
                 <img src="https://png.pngtree.com/png-clipart/20191122/original/pngtree-cat-face-line-icon-vector-png-image_5190289.jpg" align="right" style="width: 100px ; margin-right: 100px; background-color:  rgb(3, 36, 2);">
                 <h4>Estudiante</h4>
                 <p style="color:rgb(84, 250, 84)">Contacto a <a href="mailto: breynermoreno9@gmail.com">breynermoreno9@gmail.com</a></p>
