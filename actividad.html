@@ -57,6 +57,12 @@
         
             let verseccionintro = document.getElementById("intro")
                 verseccionintro.style.display = "none"
+
+            let verseccionhtml = document.getElementById("seccionHTML")
+                verseccionhtml.style.display = "none"
+
+            let verseccionjavascript = document.getElementById("seccionjavascript")
+                verseccionjavascript.style.display = "none"
             
        
         }
@@ -65,25 +71,37 @@
         
         function parteHTML(){
      
-            let verseccionhtml = document.getElementById('seccionHTML')
-                verseccionhtml.style.display = "block"
+            let verseccioncss = document.getElementById('seccionCSS')
+                verseccioncss.style.display = "none"
         
         
             let verseccionintro = document.getElementById("intro")
                 verseccionintro.style.display = "none"
-               
+
+            let verseccionhtml = document.getElementById("seccionHTML")
+                verseccionhtml.style.display = "block"
+
+            let verseccionjavascript = document.getElementById("seccionjavascript")
+                verseccionjavascript.style.display = "none"
+            
         
         }
         function partejavascript(){
         
             
         
-            let verseccionjavascript = document.getElementById('seccionjavascript')
-                verseccionjavascript.style.display = "block"
+            let verseccioncss = document.getElementById('seccionCSS')
+                verseccioncss.style.display = "none"
         
         
             let verseccionintro = document.getElementById("intro")
                 verseccionintro.style.display = "none"
+
+            let verseccionhtml = document.getElementById("seccionHTML")
+                verseccionhtml.style.display = "none"
+
+            let verseccionjavascript = document.getElementById("seccionjavascript")
+                verseccionjavascript.style.display = "block"
             
         
         
@@ -115,7 +133,7 @@
 
 
             #pie{
-                
+                width: 100%;
                 border: 5px;
                 border-style: solid;
                 border-color: rgb(0, 0, 0);
@@ -127,7 +145,7 @@
             #header{
                 width: 90%;
                 border-style: solid;
-                border-color: rgb(255, 255, 255);
+                border-color: rgb(0, 0, 0);
                 background-color: rgb(82, 206, 82);
                 color: rgb(44, 46, 44);
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -138,14 +156,14 @@
                 
                 font-family: Arial, Helvetica, sans-serif;
                 color: rgb(36, 39, 36);
-                margin-left: 50;
+                margin: 25px;
                
                 
                 
 
             }
 
-            h1{
+            h1, h2, h3, h4, h5{
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 color: rgb(4, 55, 4);
                 margin-left: 20px;
@@ -200,14 +218,15 @@
         </header>
         <aside id="mainaside">
 
-            <h2 class="subtitulo">proximo</h2>
+            <h2 class="subtitulo">novedades</h2>
             <ul>
                 
-                <li>agregar marcos a el header y footer.(listo)</li>
-                <li> poner las etiquetas aprendidas de CSS</li>
-                <li>buscar una mejor paleta de color</li>
-                <li>terminar la seccion -intro- </li>
-                <li>agregar anclas y links de referencias para una mayor movilidad en la pagina </li>
+                <li>se arreglo un bug de las secciones javascript, html y CSS</li>
+                <li>se agregaron dos nuevas etiquetas en la seccion html</li>
+                <li>se ha iniciado la secion css poximamente mas contenido</li>
+                <li>se uso la etiqueta table en la seccion html</li>
+                <li>se añadieron etiquetas en CSS</li>
+                <li>cambios menores</li>
 
 
             </ul>
@@ -264,7 +283,7 @@
                     <li>body:<br> <p>en esta etiqueta podremos basicamente todo lo que el usuario final va a ver tambien aqui ocurre toda la maquetacion que se vio en el material de apoyo de la semana 1 las etiquetas basica que puede haber dentro de esta etiqueta podrian ser
                         
                         
-                        <table>
+                        <table style="width: 70%;">
                             <tr>
                                 <th>etiquetas</th>
                                 
@@ -291,6 +310,16 @@
                             <th>Footer</th>
                             <td>es un pie de pagina </td>
                             </tr>
+                            <tr>
+                            <th>script</th>
+                            <td>esta etiqueta nos ayuda a usar codigos javascript en nuestro html estos scripts suelen ir en otro documento aparte para el orden en este caso no fue asi para facilitar el envio de la actividad</td>
+                            </tr>
+                            <tr>
+                            <th>style</th>
+                            <td>Funciona como el anterior pero en este espacio podemos poner codigos de css como dije anteriormente por orden se pone en un documento aparte</td>
+                            </tr>
+                                
+                                
                             
                         </table>
                         
@@ -307,8 +336,61 @@
         <section id="seccionCSS">
             <article>
                 <h3 class="subtitulo">CSS</h3>
-                <p>-proximamente-<br></p>
-        
+                <p>CSS son las siglas en inglés para «hojas de estilo en cascada» (Cascading Style Sheets). Básicamente, es un lenguaje que maneja el diseño y presentación de las páginas web, es decir, cómo lucen cuando un usuario las visita. Funciona junto con el lenguaje HTML que se encarga del contenido básico de las páginas. se suele usar junto a css para dar una mejor experiencia al usuario final<br></p>
+                <h4>Etiquetas</h4>
+
+                <table>
+                    <tr>
+                        <th>etiquetas</th>
+                        
+                        <th>funcion</th>
+
+                        <th>Ejemplo</th>
+                       
+                    </tr>
+                    <tr>
+                        <th>color</th>
+                        <td>la etiqueta color funciona en base al rgb que como sus siglas indican rojo azul y verde cobinando estos para dar tu color</td>
+                        <td>color: rgb(84, 250, 84);</td>
+                    </tr>
+                    <tr>
+                        <th>width</th>
+                        <td>este modifica que tan grande es algo y puedes expresarselo en pixeles, porcentaje, etc</td>
+                        <td>width: 100px;</td>
+                    </tr>
+                    <tr>
+                        <th>margin</th>
+                        <td>basicamente una margen, puedes elegir que tamaño y a que lado ira la margen</td>
+                        <td>margin: 5px;</td>
+                    </tr>
+                    <tr>
+                        <th>border</th>
+                        <td>es como la margen pero en ves de crear un espacio exterior este crea uno interno, se le puede cambiar el color, tamaño y estilo</td>
+                        <td>border: solid ipx red</td>
+                    </tr>
+                    <tr>
+                    <th>font-family</th>
+                    <td>cambia la fuente de la letra </td>
+                    <td>font-family: fuente;</td>
+                    </tr>
+                    <tr>
+                    <th>background</th>
+                    <td>modifica el fondo, actualmente desconozco mas utilidades aparte del color</td>
+                    <td>background-color: green;</td>
+                    </tr>
+                    <tr>
+                    <th>float</th>
+                    <td>hace flotar una seccion lo que hace que traspase aun no la entiendo muy bien por lo que actualizare esto -proximamente-</td>
+                    <td>float: left;</td>
+                    </tr>
+                        
+                
+                    
+                </table>
+
+                <h4>¿. o #?</h4>
+
+                -proximamente-
         
                 
 
@@ -318,7 +400,7 @@
         <section id="seccionjavascript">
             <h3>Javascript</h3>
             <article>
-                <h4>¿Qué es y para qué sirve el JavaScript?</h4>
+                <h2>¿Qué es y para qué sirve el JavaScript?</h2>
                 <p> JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu sitio web, (por ejemplo, juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). por lo que basicamenteeste lenguaje le agregaria una interactividad a tu sitio web claro que no soy el mejor con este lenguaje por lo que por ahora no puedo hacer mucho mas que mostrar las etiquetas que conozcode este lenguaje.<br> </p>
                 <ul>
 
@@ -348,7 +430,7 @@
         <footer id="pie">
             <aside >
                 <img src="https://png.pngtree.com/png-clipart/20191122/original/pngtree-cat-face-line-icon-vector-png-image_5190289.jpg" align="right" style="width: 100px ; margin-right: 100px; background-color:  rgb(3, 36, 2);">
-                <h4>Estudiante</h4>
+                <h1 style="color:  rgb(84, 250, 84);">Estudiante</h1>
                 <p style="color:rgb(84, 250, 84)">Contacto a <a href="mailto: breynermoreno9@gmail.com">breynermoreno9@gmail.com</a></p>
             
             </aside>
