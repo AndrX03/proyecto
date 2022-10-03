@@ -126,6 +126,9 @@
                 border-collapse: collapse;
                 
             }
+            .ejemplo{
+                min-width: 250px;
+            }
             th{
                 font-size: medium;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -191,16 +194,31 @@
                 
 
                 border-style: solid;
-                border-color: rgb(76, 122, 16);
+                border-color: rgb(0, 0, 0);
                 width: 340px;
                 min-height: 700px;
-                background-color: rgb(208, 241, 24);
-                margin-top: 50px;
+                background-color: rgb(145, 245, 74);
+                margin-left: 50px;
                
                 float: right;
                 clear: right;
                 
-                
+            }
+            nav{
+                border-style: solid;
+                border-color: rgb(30, 52, 2);
+                width: 200px;
+                min-height: 250px;
+                background-color: rgb(145, 245, 74);
+                margin: 70px;
+                float: right;
+                clear: right;
+            }
+
+            button:hover{
+                background-color: rgb(31, 60, 0);
+                color: rgb(176, 255, 176);
+
             }
 
         </style>
@@ -208,14 +226,34 @@
 
     </head>
 
-    <body style = "background-color: rgb(198, 237, 139); margin: 25px;">
+    <body style = "background-color: rgb(214, 245, 168); margin: 25px;">
         
-        <header id="header" >programacion y desarrollo
-            <button class="botones"id = "lobby">lobby</button>
-            <button class="botones"id = "HTML">HTML</button>
-            <button class="botones"id = "javascript">Javascript</button>
-            <button class="botones"id = "css">css</button>
+        <header id="header" >
+            <img src="https://png.pngtree.com/png-clipart/20191122/original/pngtree-cat-face-line-icon-vector-png-image_5190289.jpg" align="right" style="width: 45px ;  background-color:  rgb(3, 36, 2);">
+            <h2 style="margin: 0px;">programacion y desarrollo</h2>
+            
+            
         </header>
+        <nav>
+
+            <h3>navegacion</h3>
+            <ul>
+                <li>
+                <button class="botones"id = "lobby">lobby</button>
+                </li>
+                <li>
+                <button class="botones"id = "HTML">HTML</button>
+                </li>
+                <li>
+                <button class="botones"id = "javascript">Javascript</button>
+                </li>
+                <li>
+                <button class="botones"id = "css">css</button>
+                </li>
+            </ul>
+    
+           </nav>
+       
         <aside id="mainaside">
 
             <h2 class="subtitulo">novedades</h2>
@@ -226,7 +264,7 @@
                 <li>se ha iniciado la secion css poximamente mas contenido</li>
                 <li>se uso la etiqueta table en la seccion html</li>
                 <li>se añadieron etiquetas en CSS</li>
-                <li>cambios menores</li>
+                <li>se añadio hover en los botones</li>
 
 
             </ul>
@@ -402,20 +440,38 @@
             <article>
                 <h2>¿Qué es y para qué sirve el JavaScript?</h2>
                 <p> JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu sitio web, (por ejemplo, juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). por lo que basicamenteeste lenguaje le agregaria una interactividad a tu sitio web claro que no soy el mejor con este lenguaje por lo que por ahora no puedo hacer mucho mas que mostrar las etiquetas que conozcode este lenguaje.<br> </p>
-                <ul>
+                
 
-                    <li>function<br><p style="width: 750px;"s>esta etiquetala veo como una especie de bolsa en la que guargass un codigo que usaras luego, para usarla solo pon:
-                        <br><br> function nombredefuncion (){<br><br>aca pondremos el codigo que querramos guardar y con solo invocar el nombre de la funcion este codigo iniciara<br><br>}</p></li>
-                    <li>let<br><p style="width: 750px;">Let sirve para declarar una variable en esta misma etiqueta podriamos ponerle un valor a la variable o simplemente declararla, asi se usa:<br><br>let nombredevariable</p></li>
-                    <li>if<br><p style="width: 750px;">if es basicamente un condicional el cual como dice pone una condicion que se debe de cumplir para ejecutar un codigo de no cumplirse el codig no se ejecutara, asi se escribe<br><br> if(condicion){<br><br>codigo<br><br>}</p></li>
-                    <li>alert<br><p style="width: 750px;">crea un mensaje emergente<button id = "alerta">alert</button><br>asi se usa<br><br> alert("texto")</p></li>
-                    <li>document.getelementbyid<br><p style="width: 750px;">-proximamente- </p></li>
-    
-                </ul></p></li>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Funcion</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <th>function</th>
+                        <td>esta etiquetala veo como una especie de bolsa en la que guargass un codigo que usaras luego</td>
+                        <td class="ejemplo">function nombredefuncion ()</td>
+                    </tr>
+                    <tr>
+                        <th>let</th>
+                        <td>Let sirve para declarar una variable en esta misma etiqueta podriamos ponerle un valor a la variable o simplemente declararla</td>
+                        <td class="ejemplo">let nombredevariable</td>
 
-        </ul>
+                    </tr>
+                    <tr>
+                        <th>if</th>
+                        <td>if es basicamente un condicional el cual como dice pone una condicion que se debe de cumplir para ejecutar un codigo de no cumplirse el codig no se ejecutara</td>
+                        <td>if(condicion){<br><br>codigo<br><br>}</td>
+                    </tr>
 
-
+                    <tr>
+                        <th>alert</th>
+                        <td>crea un mensaje emergente</td>
+                        <td> alert("texto")</td>
+                    </tr>
+                </table>
+                
         
             
             </article>
